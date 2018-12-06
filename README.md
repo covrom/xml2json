@@ -4,7 +4,6 @@ Unmarshal xml and marshal it to json universally.
 ## Example of translation
 
 This xml
-
 ```xml
 <definitions name = "HelloService"
    targetNamespace = "http://www.examples.com/wsdl/HelloService.wsdl"
@@ -58,9 +57,7 @@ This xml
    </service>
 </definitions>
 ```
-
 produces this json
-
 ```json
 {
   "definitions": {
@@ -139,4 +136,9 @@ produces this json
     "xsd": "http://www.w3.org/2001/XMLSchema"
   }
 }
+```
+Benchamrk for this sample:
+```
+BenchmarkXMLNode_UnmarshalXML-4            10000            135491 ns/op
+BenchmarkXMLNode_MarshalJSON-4             20000             85595 ns/op
 ```
